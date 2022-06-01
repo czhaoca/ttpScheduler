@@ -39,7 +39,5 @@ def appt_time(location):
     print(f"Appointment duration: {duration} min")
     print(f"Appointment Ends at: {appt_end}")
 
-    # print(json.dumps(appt_details, indent=2))
-
 if __name__ == "__main__":
     main()
