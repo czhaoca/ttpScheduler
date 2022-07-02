@@ -40,7 +40,6 @@ def get_open_slot(loc_id):
     while results:
         end_time = start_time + timedelta(days=30)
         url = TIMESPAN_URL.format(start_time.isoformat(), end_time.isoformat())
-        print(url)
         slots = requests.get(url).json()
         available_slots = [slot['timestamp'] for slot in slots if slot['active'] == 1]
         print("{} - {}: {} slots available".format(start_time, end_time, len(available_slots)))
